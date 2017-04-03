@@ -1,6 +1,6 @@
 # RealEstateListings
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+Real estate listing app  :  Angular 4 and Firebase with Google Authentication :D 
 
 ## Development server
 
