@@ -13,6 +13,8 @@ import { ListingsComponent } from './components/listings/listings.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+// Routes
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
+
   ],
   providers: [],
   bootstrap: [AppComponent]
