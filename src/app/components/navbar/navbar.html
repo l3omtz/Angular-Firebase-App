@@ -1,0 +1,34 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Real Estate</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLinkActive="active">
+          <a (click)="menuToggle()" class="glyphicon glyphicon-align-justify" aria-hidden="true"></a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div *ngIf="menuOpen; then show else hide" class="col-md-12 "></div>
+<ng-template #show>
+   <div class="menu">
+     <div class="menu-list">
+       <ul class="nav text-center">
+         <li><a (click)="menuToggle()" class="glyphicon glyphicon-remove" aria-hidden="true"></a></li>
+         <li routerLinkActive="active"><a>Home</a></li>
+         <li routerLinkActive="active"><a>Listings</a></li>
+         <li routerLinkActive="active"><a>Add Listings</a></li>
+       </ul>
+     </div>
+   </div>
+</ng-template>
+<ng-template #hide>
+  <div></div>
+</ng-template>
