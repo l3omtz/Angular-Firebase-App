@@ -1,10 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* N A V  B A R */
+.navbar-container{
+  padding: 0 40px;
+}
+.navbar-brand{
+  font-size: 26px;
+}
+
+
+/* S L I D E  O U T  M E N U */
 .menu{
   background: rgba(0,0,0,0.6);
   height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10000;
 }
 .menu a{
   color: white;
@@ -21,4 +33,29 @@
 }
 menu .glyphicon:hover{
   text-decoration: none !important;
+}
+.navbar{
+  margin-bottom: 0px;
+}
+
+/* H O M E  P A G E */
+.hero-image{
+  background-image: url('./assets/images/home.jpg');
+  background-position: bottom;
+  height: 100vh;
+}
+
+.hero-box{
+  width: 50%;
+  border: 3px solid white;
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  padding: 50px;
+  text-align: center;
+}
+.hero-box h1{
+  color: white;
+  font-weight: bolder;
+  padding-bottom: 20px;
 }
