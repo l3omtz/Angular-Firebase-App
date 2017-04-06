@@ -18,7 +18,7 @@ export class ListingsComponent implements OnInit {
   ngOnInit() {
     // Call get listings function on initialize
     this._fire.getListings().subscribe(listings => { // <-- Subscribe to it with return of listings
-      this.listings = listings; // <-- Set listings = to the return listings 
+      this.listings = listings; // <-- Set listings = to the return listings
       console.log(listings);
     })
   }
