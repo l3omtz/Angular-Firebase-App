@@ -25,7 +25,7 @@
        <ul class="nav text-center">
          <li><a (click)="menuToggle()" class="glyphicon glyphicon-remove" aria-hidden="true"></a></li>
          <li><a (click)="menuToggle()" routerLink="home">Home</a></li>
-         <li><a (click)="menuToggle()" routerLink="listings">Listings</a></li>
+         <li *ngIf="(af.auth | async)"><a (click)="menuToggle()" routerLink="listings">Listings</a></li>
          <li *ngIf="(af.auth | async)"><a (click)="menuToggle()" routerLink="addListing">Add Listings</a></li>
        </ul>
      </div>
