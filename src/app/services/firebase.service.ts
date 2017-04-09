@@ -25,6 +25,9 @@ export class FirebaseService {
     return this.listing;
   }
 
+  addListing(listing) {
+
+  }
 }
 
 // Outside the class
