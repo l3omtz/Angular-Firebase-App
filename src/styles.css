@@ -63,16 +63,3 @@ menu .glyphicon:hover{
   font-weight: bolder;
   padding-bottom: 20px;
 }
-
-/* L I S T I N G S  P A G E */
-.listings-title{
-  padding-bottom: 18px;
-}
-.listings-title h1{
-  display: inline-block;
-}
-.listings-title button{
-  float: right;
-  position: relative;
-  top: 25px;
-}

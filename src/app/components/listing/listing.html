@@ -1,1 +1,24 @@
-<h1>Listing</h1>
+<div class="container" *ngIf="listing">
+  <div class="col-md-12 detail-top">
+    <a routerLink="/listings" class="btn btn-primary">Go Back</a>
+
+    <h2 class="well well-lg">{{listing.title}} <small>{{listing.city}}</small></h2>
+  </div>
+
+  <div class="col-md-4">
+    <p>image</p>
+    <p><a href="#" class="btn btn-primary" role="button">Edit</a> <a href="#" class="btn btn-default" role="button">Delete</a></p>
+
+  </div>
+  <div class="col-md-8">
+    <div class="thumbnail">
+      <div class="caption">
+        <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{listing.owner}}</p>
+        <p><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> {{listing.bedrooms}}</p>
+        <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{listing.type}}</p>
+        <p><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> {{listing.price}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>

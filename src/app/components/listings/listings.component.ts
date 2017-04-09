@@ -3,7 +3,8 @@ import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'listings',
-  templateUrl: './listings.html'
+  templateUrl: './listings.html',
+  styleUrls: ['./style.css']
 })
 
 export class ListingsComponent implements OnInit {

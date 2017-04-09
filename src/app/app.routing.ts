@@ -12,5 +12,6 @@ export const routing = RouterModule.forRoot([
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'listings', component: ListingsComponent },
+  { path: 'listing/:id', component: ListingComponent },
   { path: 'addListing', component: AddListingComponent }
 ])
