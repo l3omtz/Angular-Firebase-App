@@ -11,7 +11,6 @@ import * as firebase from 'firebase';
 export class ListingsComponent implements OnInit {
 
   listings: any;
-  imageUrl: any;
 
   // Inject as dependancy to the constructor
   constructor(private _fire: FirebaseService) {
@@ -22,17 +21,17 @@ export class ListingsComponent implements OnInit {
     // Call get listings function on initialize
     this._fire.getListings().subscribe(listings => { // <-- Subscribe to it with return of listings
       this.listings = listings; // <-- Set listings = to the return listings
-      console.log(listings[0].path);
+
       let storageRef = firebase.storage().ref();
       // let spaceRef = storageRef.child(this.listings.path);
-
-      storageRef.child(this.listings[0].path).getDownloadURL().then((url) => {
-        // set image url
-        this.imageUrl = url;
-      }).catch((err) => {
-        console.log(err);
-      });
-
+      for (let x of this.listings) {
+        storageRef.child(x.path).getDownloadURL().then((url) => {
+          // set image url
+          x.path = url;
+        }).catch((err) => {
+          // console.log(err);
+        });
+      }
     });
   }
 
