@@ -5,20 +5,29 @@
     <h2 class="well well-lg">{{listing.title}} <small>{{listing.city}}</small></h2>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-9">
     <img src="{{imageUrl}}" class="thumbnail">
-    <p><a href="#" class="btn btn-primary" role="button">Edit</a> <a href="#" class="btn btn-default" role="button">Delete</a></p>
-
   </div>
-  <div class="col-md-8">
-    <div class="thumbnail">
+  <div class="col-md-3 thumbnail">
+    <div class="">
       <div class="caption">
-        <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{listing.owner}}</p>
-        <p><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> {{listing.bedrooms}}</p>
-        <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{listing.type}}</p>
-        <p><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> {{listing.price}}</p>
+        <h2>Owner:</h2>
+        <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{listing.owner}}</h4>
+        <h2>Bedrooms:</h2>
+        <h4><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> {{listing.bedrooms}}</h4>
+        <h2>Property Type:</h2>
+        <h4><span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{listing.type}}</h4>
+        <h2>Price:</h2>
+        <h4><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> {{listing.price | currency:'USD':true:'4.2-2'}}</h4>
       </div>
     </div>
   </div>
-
+  <div class="col-md-3 thumbnail edit-box">
+    <div class="col-md-12">
+      <p class="no-padding-margin"><a href="#" class="btn btn-primary edit-button" role="button">Edit</a></p>
+    </div>
+    <div class="col-md-12">
+      <p class="no-padding-margin"><a href="#" class="btn btn-default delete-button" role="button">Delete</a></p>
+    </div>
+  </div>
 </div>

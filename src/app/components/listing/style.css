@@ -2,3 +2,21 @@
 .detail-top{
   padding-top: 15px;
 }
+img{
+  width: 100%;
+}
+.edit-button,
+.delete-button{
+  width:100%;
+}
+.edit-button{
+  margin-bottom: 10px;
+}
+.no-padding-margin{
+  margin:0px;
+  padding:0px;
+}
+.edit-box{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
