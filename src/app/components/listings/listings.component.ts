@@ -22,16 +22,19 @@ export class ListingsComponent implements OnInit {
     this._fire.getListings().subscribe(listings => { // <-- Subscribe to it with return of listings
       this.listings = listings; // <-- Set listings = to the return listings
 
-      let storageRef = firebase.storage().ref();
-      // let spaceRef = storageRef.child(this.listings.path);
-      for (let x of this.listings) {
-        storageRef.child(x.path).getDownloadURL().then((url) => {
-          // set image url
-          x.path = url;
-        }).catch((err) => {
-          // console.log(err);
-        });
-      }
+      // =======
+      // Looping images to show
+      // in listings -- not best practice
+      // =======
+      // let storageRef = firebase.storage().ref();
+      // for (let x of this.listings) {
+      //   storageRef.child(x.path).getDownloadURL().then((url) => {
+      //     x.path = url;
+      //   }).catch((err) => {
+      //     console.log(err);
+      //   });
+      // }
+
     });
   }
 
