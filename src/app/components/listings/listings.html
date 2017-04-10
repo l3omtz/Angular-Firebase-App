@@ -11,7 +11,7 @@
           <a [routerLink]="['/listing/' + listing.$key]"><h3>{{listing.title}}</h3></a>
           <p>{{listing.city}}</p>
         </div>
-         <!-- <img src="..." alt="...">  -->
+         <img src="{{imageUrl}}" class="thumbnail"> 
         <div class="caption">
           <p>Owner: {{listing.owner}}</p>
           <p>Type: {{listing.type}}</p>

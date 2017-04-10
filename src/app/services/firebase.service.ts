@@ -45,7 +45,7 @@ export class FirebaseService {
       iRef.put(selectedFile).then((snapshot) => {
         listing.image = selectedFile.name; // <-- set listing image to the name of the selesctd file  -- image: "name.jpg"
         listing.path = path; // <-- so we can have a path to the image -- path: "/foldername/imagename/"
-        return this.listings.push(listing); // <-- this will save everything from from -- pushing to the list 
+        return this.listings.push(listing); // <-- this will save everything from from -- pushing to the list
       });
     }
   }
