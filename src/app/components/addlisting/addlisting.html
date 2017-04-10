@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <h1>Add Property</h1>
       </div>
-      <form class="col-md-12" [formGroup]="form" (ngSubmit)="submitForm()">
+      <form class="col-md-12" [formGroup]="form" (submit)="submitForm()">
         <div class="form-group">
           <input type="text" name="title" placeholder="Title"
           [(ngModel)]="title"
@@ -52,7 +52,7 @@
           <input type="file" name="image" id="image" [(ngModel)]="image" formControlName="image">
         </div>
 
-        <button type="submit" name="button" class="btn btn-default">Submit</button>
+        <button type="submit" value="submit" name="button" class="btn btn-default">Submit</button>
 
       </form>
     </div>

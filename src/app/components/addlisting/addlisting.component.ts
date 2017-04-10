@@ -52,11 +52,12 @@ export class AddListingComponent implements OnInit {
       type: this.type,
       price: this.price,
       bedrooms: this.bedrooms
+      // imgage: selectedFile.name will be set in the service function
     }
 
-    // @TODO Add condition to check if form is filled out correctly before navigating and submitting
+    // @TODO Add condition to mkae sure form is correct before submit
+    //  Add condition to check if form is filled out correctly before navigating and submitting
     this._fire.addListing(listing);
-
     this._route.navigate(['listings']);
   }
 
