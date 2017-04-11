@@ -54,8 +54,12 @@ export class FirebaseService {
 
   // Update listing
   updateListing(id, listing) {
-    // Getting from constructor -- getting single listing  and updating to the new lsiting 
+    // Getting from constructor -- getting single listing  and updating to the new lsiting
     return this.listings.update(id, listing);
+  }
+
+  deleteListing(id) {
+    return this.listings.remove(id); // <-- Simple enough to remove :D 
   }
 
 }

@@ -43,4 +43,10 @@ export class ListingComponent implements OnInit {
 
   }
 
+  onDelete() {
+    this._fire.deleteListing(this.id);
+
+    this._router.navigate(['/listings']);
+  }
+
 }

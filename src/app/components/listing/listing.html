@@ -27,7 +27,7 @@
       <p class="no-padding-margin"><a [routerLink]="['/editlisting/' + listing.$key ]" class="btn btn-primary edit-button" role="button">Edit</a></p>
     </div>
     <div class="col-md-12">
-      <p class="no-padding-margin"><a href="#" class="btn btn-default delete-button" role="button">Delete</a></p>
+      <p class="no-padding-margin"><a (click)="onDelete()" class="btn btn-default delete-button" role="button">Delete</a></p>
     </div>
   </div>
 </div>
