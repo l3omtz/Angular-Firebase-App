@@ -69,7 +69,7 @@ export class EditListingComponent implements OnInit {
       city: this.city,
       bedrroms: this.bedrooms,
       price: this.price,
-      type: this.price
+      type: this.type
     }
 
     // TODO -- add conition to make sure from is correct
