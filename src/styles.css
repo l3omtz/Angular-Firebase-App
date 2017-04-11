@@ -63,3 +63,10 @@ menu .glyphicon:hover{
   font-weight: bolder;
   padding-bottom: 20px;
 }
+
+.thumbnail{
+  -webkit-box-shadow: -2px 2px 30px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 2px 30px -9px rgba(0,0,0,0.75);
+box-shadow: -2px 2px 30px -9px rgba(0,0,0,0.75);
+
+}

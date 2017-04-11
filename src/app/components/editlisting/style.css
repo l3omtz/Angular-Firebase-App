@@ -3,6 +3,7 @@
 }
 .add-listing-form{
   display: inline-block;
+  width: 100%;
   /*position: relative;
   top: 50%;
   left: 50%;
@@ -18,4 +19,7 @@ form{
   border: none;
   border-bottom: 1px solid gray;
   border-radius: 0px !important;
+}
+.form-control:focus{
+  border-bottom: 1px solid #4DD0E1;
 }
