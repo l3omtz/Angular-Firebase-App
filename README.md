@@ -1,6 +1,7 @@
 # RealEstateListings
 
-Real estate listing app  :  Angular 4 and Firebase with Google Authentication :D 
+Real estate listing app  :  Angular 4 and Firebase with Google Authentication :D
+Hosted : Firebase Hosting - 'https://real-estate-listings-9c245.firebaseapp.com/'
 
 ## Development server
 
