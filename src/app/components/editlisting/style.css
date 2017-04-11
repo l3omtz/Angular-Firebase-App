@@ -1,0 +1,21 @@
+.back-button{
+  padding-top: 30px;
+}
+.add-listing-form{
+  display: inline-block;
+  /*position: relative;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);*/
+}
+form{
+  padding: 20px 20px;
+}
+.form-control{
+  box-shadow: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  border-radius: 0px !important;
+}

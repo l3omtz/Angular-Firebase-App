@@ -10,28 +10,30 @@ export class FirebaseService {
   // Set listings to type Firebase Observable any -- Lists
   listings: FirebaseListObservable<any[]>;
   // Set listings to type Object Obserable
-  listing: FirebaseObjectObservable<any[]>;
+  listing: FirebaseObjectObservable<any>;
   // Create image folder of any
   folder: any;
 
   constructor(private _af: AngularFire) {
     // Folder name on the firebase side
     this.folder = "listingimages";
-  }
 
-  // Fuction to get llstings
-  getListings() {
-    // Set listings to  private module listings as FirebaseListObservable of type Listing interface
+    // Set listings to  be used everywhere in this service
     this.listings = this._af.database.list('/listings') as FirebaseListObservable<Listing[]>
-    return this.listings; // <- Return the listings we got from the DB
   }
 
+  // Get all llstings
+  getListings() {
+    return this.listings; // <- Return the listings we got from the DB -- getting from the constructor
+  }
+
+  // Get single listing
   getListingDetail(id) {
     this.listing = this._af.database.object('/listings/' + id) as FirebaseObjectObservable<Listing>
     return this.listing;
   }
 
-
+  // Add Listing
   addListing(listing) {
     // Create root ref for image
     let storageRef = firebase.storage().ref();
@@ -48,6 +50,12 @@ export class FirebaseService {
         return this.listings.push(listing); // <-- this will save everything from from -- pushing to the list
       });
     }
+  }
+
+  // Update listing
+  updateListing(id, listing) {
+    // Getting from constructor -- getting single listing  and updating to the new lsiting 
+    return this.listings.update(id, listing);
   }
 
 }
